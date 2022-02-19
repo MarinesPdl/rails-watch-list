@@ -2,7 +2,7 @@
   <h1> Create a new Bookmark </h1>
   <%= simple_form_for [@list, @bookmark] do |f| %>
   <%= f.input :comment %>
-  <%= f.association :movie %>
+  <%= f.association :movie, prompt: 'Select a movie', input_html: { data: { controller: 'select2' } %>
   <%= f.input :photo, class: "btn-dark btn-lg", as: :file %>
   <%= f.submit "Create", class: "btn-dark btn-lg" %>
   <% end  %>
